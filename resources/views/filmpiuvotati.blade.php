@@ -1,12 +1,18 @@
 @extends('layouts.main')
 
 @section('content')
-  <h1>film più votati</h1>
-  <ul>
-    @foreach ($movies as $movie)
-
-      <li>{{$movie['title']}} || {{$movie['vote']}}</li>
+  <section class="filmpiuvotati">
+    <div class="container">
       
-    @endforeach
-  </ul>
+      <h1>film con un voto > 8</h1>
+    
+      <ul>
+        @foreach ($movies as $movie)
+    
+          <li>{{$movie['title']}} || {{$movie['vote']}}</li>
+          
+        @endforeach
+      </ul>
+    </div>
+  </section>
 @endsection
