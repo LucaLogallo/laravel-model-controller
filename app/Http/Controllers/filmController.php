@@ -9,7 +9,7 @@ class filmController extends Controller
 {
     public function index(){
 
-        $movies = Movie::where('vote', >9)->get();
+        $movies = Movie::where('vote' >9)->get();
 
         $data = [
             'movies' => $movies
